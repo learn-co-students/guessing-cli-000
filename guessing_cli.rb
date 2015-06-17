@@ -4,7 +4,7 @@ def run_guessing_game
     puts "Guess a number between 1 and 6."
     input = gets
 	input.chomp!
-    rnd = rand(7) #wrong! must be rand(6) + 1 but then the remote tests won't pass
+    rnd = rand(1..6) 
     if input == "exit" then
 	  break
 	elsif input.to_i == rnd then
